@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Default Creation</title>
+    <link rel="stylesheet" href="master.css" type="text/css" />
+    <link rel="stylesheet" href="print.css" type="text/css" media="print" />
+    <script src="scripts/jquery.js" type="text/javascript"></script>
+    <script src="scripts/scripts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+  initializeToc();
+});
+</script>
+    <!-- We are using Font Awesome - http://fortawesome.github.com/Font-Awesome - licensed under CC BY 3.0 -->
+  </head>
+  <body>
+    <div id="container">
+      <div id="top" />
+      <div id="toc">
+        <p class="tocCollapser" title="Collapse Table of Content">«</p>
+        <ul class="features">
+          <li class="file" id="root">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="file">
+            <span class="current">Default Creation</span>
+            <span class="float-right">
+              <i class="icon-ok passed" title="Successful"> </i>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div id="feature">
+        <div class="float-right">
+          <i class="icon-ok passed" title="Successful"> </i>
+        </div>
+        <h1>Default Creation</h1>
+        <div class="description">
+          <p>In order to access RestSharp's injection services in the normal way
+As a RESTful API consumer
+I want to be able to create default instances of RestSharp's services</p>
+        </div>
+        <ul id="scenarios">
+          <li class="scenario">
+            <div class="float-right">
+              <i class="icon-warning-sign inconclusive" title="Inconclusive"> </i>
+            </div>
+            <div class="scenario-heading">
+              <h2></h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I have a default RestSharp service factory</li>
+              </ul>
+            </div>
+          </li>
+          <li class="scenario">
+            <div class="float-right">
+              <i class="icon-ok passed" title="Successful"> </i>
+            </div>
+            <div class="scenario-heading">
+              <h2>Create Default Client</h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">When </span>I create a client with the URL "http://test.com/api"</li>
+                <li class="step">
+                  <span class="keyword">Then </span>my client should be the default client type</li>
+                <li class="step">
+                  <span class="keyword">And </span>my client's URL should be "http://test.com/api"</li>
+              </ul>
+            </div>
+          </li>
+          <li class="scenario">
+            <div class="float-right">
+              <i class="icon-ok passed" title="Successful"> </i>
+            </div>
+            <div class="scenario-heading">
+              <h2>Create Default Request</h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">When </span>I create a request with a specific &lt;method&gt; and &lt;resource&gt;</li>
+                <li class="step">
+                  <span class="keyword">Then </span>my request should be the default request type</li>
+                <li class="step">
+                  <span class="keyword">And </span>my request's method should be &lt;method&gt;</li>
+                <li class="step">
+                  <span class="keyword">And </span>my request's resource should be &lt;resource&gt;</li>
+              </ul>
+            </div>
+            <div>
+              <div class="examples">
+                <h3>Examples: </h3>
+                <div class="table_container">
+                  <table class="datatable">
+                    <thead>
+                      <tr>
+                        <th>method</th>
+                        <th>resource</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>GET</td>
+                        <td>data</td>
+                      </tr>
+                      <tr>
+                        <td>PUT</td>
+                        <td>data</td>
+                      </tr>
+                      <tr>
+                        <td>POST</td>
+                        <td>data</td>
+                      </tr>
+                      <tr>
+                        <td>DELETE</td>
+                        <td>data</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="footer">
+        <p>Pickled on: 10 October 2013 11:09:13</p>
+        <p>Produced by Pickles, version 0.11.0.0</p>
+      </div>
+    </div>
+  </body>
+</html>
