@@ -23,9 +23,31 @@
 
 #endregion
 
-using System.Reflection;
-using System.Runtime.InteropServices;
+using System;
 
-[assembly: AssemblyTitle("RestSharp.Injection")]
-[assembly: AssemblyDescription("A simple, testable abstraction around the creation of RestSharp component instances")]
-[assembly: Guid("089fdef9-2e18-47cd-9109-afcd93d7d44b")]
+using Autofac;
+
+namespace RestSharp.Injection.Autofac
+{
+	/// <summary>
+	///    Provides Autofac registrations for the public types in RestSharp.Injection.
+	/// </summary>
+	public class RestSharpModule : Module
+	{
+		/// <summary>
+		///    Adds RestSharp.Injection-based registrations to the container.
+		/// </summary>
+		/// <param name="builder">
+		///    The builder through which components can be registered.
+		/// </param>
+		/// <remarks>
+		///    Note that the ContainerBuilder parameter is unique to this module.
+		/// </remarks>
+		protected override void Load(ContainerBuilder builder)
+		{
+			builder.RegisterInstance<Func<string, IRestClient>>(url => new RestClient(url));
+			builder.RegisterInstance<Func<string, Method, IRestRequest>>((resource, method) => new RestRequest(resource, method));
+			builder.RegisterType<RestSharpFactory>().As<IRestSharpFactory>();
+		}
+	}
+}
