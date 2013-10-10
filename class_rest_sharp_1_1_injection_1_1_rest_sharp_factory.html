@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>RestSharp.Injection: RestSharp.Injection.IRestSharpFactory Interface Reference</title>
+<title>RestSharp.Injection: RestSharp.Injection.RestSharpFactory Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('interface_rest_sharp_1_1_injection_1_1_i_rest_sharp_factory.html','');});
+$(document).ready(function(){initNavTree('class_rest_sharp_1_1_injection_1_1_rest_sharp_factory.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -106,42 +106,81 @@ $(document).ready(function(){initNavTree('interface_rest_sharp_1_1_injection_1_1
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="interface_rest_sharp_1_1_injection_1_1_i_rest_sharp_factory-members.html">List of all members</a>  </div>
+<a href="class_rest_sharp_1_1_injection_1_1_rest_sharp_factory-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">RestSharp.Injection.IRestSharpFactory Interface Reference</div>  </div>
+<div class="title">RestSharp.Injection.RestSharpFactory Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Provides a factory for <a class="el" href="namespace_rest_sharp.html">RestSharp</a> service creation.  
- <a href="interface_rest_sharp_1_1_injection_1_1_i_rest_sharp_factory.html#details">More...</a></p>
+<p>Provides a Dependency Inversion-based implementation of <a class="el" href="interface_rest_sharp_1_1_injection_1_1_i_rest_sharp_factory.html" title="Provides a factory for RestSharp service creation. ">IRestSharpFactory</a>.  
+ <a href="class_rest_sharp_1_1_injection_1_1_rest_sharp_factory.html#details">More...</a></p>
 <div class="dynheader">
-Inheritance diagram for RestSharp.Injection.IRestSharpFactory:</div>
+Inheritance diagram for RestSharp.Injection.RestSharpFactory:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="interface_rest_sharp_1_1_injection_1_1_i_rest_sharp_factory.png" usemap="#RestSharp.Injection.IRestSharpFactory_map" alt=""/>
-  <map id="RestSharp.Injection.IRestSharpFactory_map" name="RestSharp.Injection.IRestSharpFactory_map">
-<area href="class_rest_sharp_1_1_injection_1_1_rest_sharp_factory.html" title="Provides a Dependency Inversion-based implementation of IRestSharpFactory. " alt="RestSharp.Injection.RestSharpFactory" shape="rect" coords="0,56,230,80"/>
+  <img src="class_rest_sharp_1_1_injection_1_1_rest_sharp_factory.png" usemap="#RestSharp.Injection.RestSharpFactory_map" alt=""/>
+  <map id="RestSharp.Injection.RestSharpFactory_map" name="RestSharp.Injection.RestSharpFactory_map">
+<area href="interface_rest_sharp_1_1_injection_1_1_i_rest_sharp_factory.html" title="Provides a factory for RestSharp service creation. " alt="RestSharp.Injection.IRestSharpFactory" shape="rect" coords="0,0,230,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acafa1cdfc8410d4668f3d5fe6e973456"><td class="memItemLeft" align="right" valign="top">IRestClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_rest_sharp_1_1_injection_1_1_i_rest_sharp_factory.html#acafa1cdfc8410d4668f3d5fe6e973456">CreateClient</a> (string url)</td></tr>
-<tr class="memdesc:acafa1cdfc8410d4668f3d5fe6e973456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the client.  <a href="#acafa1cdfc8410d4668f3d5fe6e973456">More...</a><br/></td></tr>
-<tr class="separator:acafa1cdfc8410d4668f3d5fe6e973456"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a745c391ec683c5cfa157f59a7cb4e701"><td class="memItemLeft" align="right" valign="top">IRestRequest&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_rest_sharp_1_1_injection_1_1_i_rest_sharp_factory.html#a745c391ec683c5cfa157f59a7cb4e701">CreateRequest</a> (string resource, Method method)</td></tr>
-<tr class="memdesc:a745c391ec683c5cfa157f59a7cb4e701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the request.  <a href="#a745c391ec683c5cfa157f59a7cb4e701">More...</a><br/></td></tr>
-<tr class="separator:a745c391ec683c5cfa157f59a7cb4e701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b1882f5a8b14d53cee6183a5d8c8844"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rest_sharp_1_1_injection_1_1_rest_sharp_factory.html#a0b1882f5a8b14d53cee6183a5d8c8844">RestSharpFactory</a> (Func&lt; string, IRestClient &gt; clientCreator, Func&lt; string, Method, IRestRequest &gt; requestCreator)</td></tr>
+<tr class="memdesc:a0b1882f5a8b14d53cee6183a5d8c8844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="class_rest_sharp_1_1_injection_1_1_rest_sharp_factory.html" title="Provides a Dependency Inversion-based implementation of IRestSharpFactory. ">RestSharpFactory</a> class.  <a href="#a0b1882f5a8b14d53cee6183a5d8c8844">More...</a><br/></td></tr>
+<tr class="separator:a0b1882f5a8b14d53cee6183a5d8c8844"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae05de2b922f93bd0627fdb42a6e1bdb"><td class="memItemLeft" align="right" valign="top">IRestClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rest_sharp_1_1_injection_1_1_rest_sharp_factory.html#aae05de2b922f93bd0627fdb42a6e1bdb">CreateClient</a> (string url)</td></tr>
+<tr class="memdesc:aae05de2b922f93bd0627fdb42a6e1bdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the client.  <a href="#aae05de2b922f93bd0627fdb42a6e1bdb">More...</a><br/></td></tr>
+<tr class="separator:aae05de2b922f93bd0627fdb42a6e1bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74cb486e947ac53c1315eaed3cb52bfc"><td class="memItemLeft" align="right" valign="top">IRestRequest&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rest_sharp_1_1_injection_1_1_rest_sharp_factory.html#a74cb486e947ac53c1315eaed3cb52bfc">CreateRequest</a> (string resource, Method method)</td></tr>
+<tr class="memdesc:a74cb486e947ac53c1315eaed3cb52bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the request.  <a href="#a74cb486e947ac53c1315eaed3cb52bfc">More...</a><br/></td></tr>
+<tr class="separator:a74cb486e947ac53c1315eaed3cb52bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Provides a factory for <a class="el" href="namespace_rest_sharp.html">RestSharp</a> service creation. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="acafa1cdfc8410d4668f3d5fe6e973456"></a>
+<div class="textblock"><p>Provides a Dependency Inversion-based implementation of <a class="el" href="interface_rest_sharp_1_1_injection_1_1_i_rest_sharp_factory.html" title="Provides a factory for RestSharp service creation. ">IRestSharpFactory</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a0b1882f5a8b14d53cee6183a5d8c8844"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IRestClient RestSharp.Injection.IRestSharpFactory.CreateClient </td>
+          <td class="memname">RestSharp.Injection.RestSharpFactory.RestSharpFactory </td>
+          <td>(</td>
+          <td class="paramtype">Func&lt; string, IRestClient &gt;&#160;</td>
+          <td class="paramname"><em>clientCreator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Func&lt; string, Method, IRestRequest &gt;&#160;</td>
+          <td class="paramname"><em>requestCreator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a new instance of the <a class="el" href="class_rest_sharp_1_1_injection_1_1_rest_sharp_factory.html" title="Provides a Dependency Inversion-based implementation of IRestSharpFactory. ">RestSharpFactory</a> class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clientCreator</td><td>The client creator.</td></tr>
+    <tr><td class="paramname">requestCreator</td><td>The request creator.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aae05de2b922f93bd0627fdb42a6e1bdb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IRestClient RestSharp.Injection.RestSharpFactory.CreateClient </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>url</em>)</td><td></td>
@@ -158,16 +197,16 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_rest_sharp_1_1_injection_1_1_rest_sharp_factory.html#aae05de2b922f93bd0627fdb42a6e1bdb">RestSharp.Injection.RestSharpFactory</a>.</p>
+<p>Implements <a class="el" href="interface_rest_sharp_1_1_injection_1_1_i_rest_sharp_factory.html#acafa1cdfc8410d4668f3d5fe6e973456">RestSharp.Injection.IRestSharpFactory</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a745c391ec683c5cfa157f59a7cb4e701"></a>
+<a class="anchor" id="a74cb486e947ac53c1315eaed3cb52bfc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IRestRequest RestSharp.Injection.IRestSharpFactory.CreateRequest </td>
+          <td class="memname">IRestRequest RestSharp.Injection.RestSharpFactory.CreateRequest </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>resource</em>, </td>
@@ -195,7 +234,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_rest_sharp_1_1_injection_1_1_rest_sharp_factory.html#a74cb486e947ac53c1315eaed3cb52bfc">RestSharp.Injection.RestSharpFactory</a>.</p>
+<p>Implements <a class="el" href="interface_rest_sharp_1_1_injection_1_1_i_rest_sharp_factory.html#a745c391ec683c5cfa157f59a7cb4e701">RestSharp.Injection.IRestSharpFactory</a>.</p>
 
 </div>
 </div>
@@ -204,7 +243,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespace_rest_sharp.html">RestSharp</a></li><li class="navelem"><a class="el" href="namespace_rest_sharp_1_1_injection.html">Injection</a></li><li class="navelem"><a class="el" href="interface_rest_sharp_1_1_injection_1_1_i_rest_sharp_factory.html">IRestSharpFactory</a></li>
+    <li class="navelem"><a class="el" href="namespace_rest_sharp.html">RestSharp</a></li><li class="navelem"><a class="el" href="namespace_rest_sharp_1_1_injection.html">Injection</a></li><li class="navelem"><a class="el" href="class_rest_sharp_1_1_injection_1_1_rest_sharp_factory.html">RestSharpFactory</a></li>
     <li class="footer">Generated on Thu Oct 10 2013 13:00:22 for RestSharp.Injection by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
