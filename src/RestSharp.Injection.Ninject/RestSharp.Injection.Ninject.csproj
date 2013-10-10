@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CDC7D40C-C1E2-4904-A557-339AC66EAAEE}</ProjectGuid>
+    <ProjectGuid>{FF89129A-257F-4066-9D78-8E191ADFCE5D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RestSharp.Injection</RootNamespace>
-    <AssemblyName>RestSharp.Injection</AssemblyName>
+    <RootNamespace>RestSharp.Injection.Ninject</RootNamespace>
+    <AssemblyName>RestSharp.Injection.Ninject</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -23,8 +23,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\RestSharp.Injection.XML</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\RestSharp.Injection.Ninject.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="RestSharp">
       <HintPath>..\packages\RestSharp.104.2.0\lib\net4\RestSharp.dll</HintPath>
     </Reference>
@@ -47,22 +50,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RestSharpFactory.cs" />
-    <Compile Include="IRestSharpFactory.cs" />
-    <Compile Include="Properties\SolutionAssemblyInfo.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SolutionAssemblyInfo.tt</DependentUpon>
+    <Compile Include="..\RestSharp.Injection\Properties\SolutionAssemblyInfo.cs">
+      <Link>Properties\SolutionAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestSharpModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Properties\SolutionAssemblyInfo.settings.tt" />
-    <None Include="Properties\SolutionAssemblyInfo.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SolutionAssemblyInfo.cs</LastGenOutput>
+    <None Include="RestSharp.Injection.Ninject.nuspec">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RestSharp.Injection.Ninject.tt</DependentUpon>
     </None>
+    <None Include="RestSharp.Injection.Ninject.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RestSharp.Injection.Ninject.nuspec</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RestSharp.Injection\RestSharp.Injection.csproj">
+      <Project>{CDC7D40C-C1E2-4904-A557-339AC66EAAEE}</Project>
+      <Name>RestSharp.Injection</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
