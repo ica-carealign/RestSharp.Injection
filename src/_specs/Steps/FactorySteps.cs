@@ -22,7 +22,7 @@ namespace _specs.Steps
 		[Given(@"I have a default RestSharp service factory")]
 		public void CreateDefaultFactory()
 		{
-			_restSharp.Factory = new DefaultRestSharpFactory();
+			_restSharp.Factory = new RestSharpFactory(url => new RestClient(url), (resource, method) => new RestRequest(resource, method));
 		}
 
 		[When(@"I create a client with the URL ""(.*)""")]

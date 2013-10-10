@@ -26,6 +26,6 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("RestSharp.Injection")]
-[assembly: AssemblyDescription("A simple, testable abstraction around the creation of RestSharp component instances")]
-[assembly: Guid("089fdef9-2e18-47cd-9109-afcd93d7d44b")]
+[assembly: AssemblyTitle("RestSharp.Injection.Ninject")]
+[assembly: AssemblyDescription("Ninject support for the RestSharp.Injection project")]
+[assembly: Guid("c1da21a4-604b-44f4-bced-6985bb6e66fa")]
