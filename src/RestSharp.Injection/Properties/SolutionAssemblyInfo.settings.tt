@@ -2,10 +2,10 @@
 Settings.Initialize(
 	product: "RestSharp.Injection",
 	majorNumber: 1,
-	minorNumber: 0,
+	minorNumber: 1,
 	patchNumber: 0,
-	buildNumber: null,
-	buildLevel: BuildLevels.None
+	buildNumber: 1,
+	buildLevel: BuildLevels.Beta
 );
 #><#+
 public enum BuildLevels
