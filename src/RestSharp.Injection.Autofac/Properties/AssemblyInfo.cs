@@ -26,6 +26,6 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("RestSharp.Injection")]
-[assembly: AssemblyDescription("A simple, testable abstraction around the creation of RestSharp component instances")]
-[assembly: Guid("089fdef9-2e18-47cd-9109-afcd93d7d44b")]
+[assembly: AssemblyTitle("RestSharp.Injection.Autofac")]
+[assembly: AssemblyDescription("Autofac support for the RestSharp.Injection project")]
+[assembly: Guid("2b70d763-31a8-4010-8b4b-7b34ce7c9a99")]
