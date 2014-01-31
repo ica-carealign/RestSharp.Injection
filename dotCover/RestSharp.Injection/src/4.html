@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>c:\projects\github\wesam18\restsharp.injection\src\restsharp.injection\restsharpfactory.cs</title>
+    <script type="text/javascript" src="../js/dotcover.sourceview.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/dotcover.report.css" />
+  </head>
+  <body>
+    <pre id="content" class="source-code">
+using System;
+
+namespace RestSharp.Injection
+{
+	/// &lt;summary&gt;
+	///    Provides a Dependency Inversion-based implementation of &lt;see cref=&quot;IRestSharpFactory&quot; /&gt;.
+	/// &lt;/summary&gt;
+	public class RestSharpFactory : IRestSharpFactory
+	{
+		private readonly Func&lt;string, IRestClient&gt; _clientCreator;
+		private readonly Func&lt;string, Method, IRestRequest&gt; _requestCreator;
+
+		/// &lt;summary&gt;
+		/// Initializes a new instance of the &lt;see cref=&quot;RestSharpFactory&quot;/&gt; class.
+		/// &lt;/summary&gt;
+		/// &lt;param name=&quot;clientCreator&quot;&gt;The client creator.&lt;/param&gt;
+		/// &lt;param name=&quot;requestCreator&quot;&gt;The request creator.&lt;/param&gt;
+		public RestSharpFactory(Func&lt;string, IRestClient&gt; clientCreator, Func&lt;string, Method, IRestRequest&gt; requestCreator)
+		{
+			_clientCreator = clientCreator;
+			_requestCreator = requestCreator;
+		}
+
+		/// &lt;summary&gt;
+		///    Creates the client.
+		/// &lt;/summary&gt;
+		/// &lt;param name=&quot;url&quot;&gt;The URL.&lt;/param&gt;
+		public IRestClient CreateClient(string url)
+		{
+			return _clientCreator(url);
+		}
+
+		/// &lt;summary&gt;
+		///    Creates the request.
+		/// &lt;/summary&gt;
+		/// &lt;param name=&quot;resource&quot;&gt;The resource.&lt;/param&gt;
+		/// &lt;param name=&quot;method&quot;&gt;The method.&lt;/param&gt;
+		public IRestRequest CreateRequest(string resource, Method method)
+		{
+			return _requestCreator(resource, method);
+		}
+	}
+}
+    </pre>
+    <script type="text/javascript">
+      highlightRanges([[18,3,18,118,1],[19,3,19,4,1],[20,4,20,35,1],[21,4,21,37,1],[22,3,22,4,1],[29,3,29,4,1],[30,4,30,31,1],[31,3,31,4,1],[39,3,39,4,1],[40,4,40,45,1],[41,3,41,4,1]]);
+    </script>
+  </body>
+</html>
