@@ -50,19 +50,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestSharpFactory.cs" />
     <Compile Include="IRestSharpFactory.cs" />
-    <Compile Include="Properties\SolutionAssemblyInfo.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SolutionAssemblyInfo.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Properties\SolutionAssemblyInfo.settings.tt" />
-    <None Include="Properties\SolutionAssemblyInfo.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SolutionAssemblyInfo.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -1,6 +1,6 @@
 ﻿#region FreeBSD
 
-// Copyright (c) 2013, The Tribe
+// Copyright (c) 2014, The Tribe
 // All rights reserved.
 // 
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that
@@ -29,3 +29,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("RestSharp.Injection")]
 [assembly: AssemblyDescription("A simple, testable abstraction around the creation of RestSharp component instances")]
 [assembly: Guid("089fdef9-2e18-47cd-9109-afcd93d7d44b")]
+[assembly: AssemblyCompany("The Tribe")]
+[assembly: AssemblyProduct("RestSharp.Injection")]
+[assembly: AssemblyCopyright("Copyright © The Tribe 2014")]
+[assembly: ComVisible(false)]
+[assembly: AssemblyVersion("1.1.0")]
+[assembly: AssemblyInformationalVersion("1.1.0")]
