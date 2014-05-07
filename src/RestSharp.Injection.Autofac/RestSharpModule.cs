@@ -1,6 +1,4 @@
-﻿#region FreeBSD
-
-// Copyright (c) 2013, The Tribe
+﻿// Copyright (c) 2014, The Tribe
 // All rights reserved.
 // 
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that
@@ -21,33 +19,29 @@
 // NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#endregion
-
-using System;
-
 using Autofac;
 
 namespace RestSharp.Injection.Autofac
 {
-	/// <summary>
-	///    Provides Autofac registrations for the public types in RestSharp.Injection.
-	/// </summary>
-	public class RestSharpModule : Module
-	{
-		/// <summary>
-		///    Adds RestSharp.Injection-based registrations to the container.
-		/// </summary>
-		/// <param name="builder">
-		///    The builder through which components can be registered.
-		/// </param>
-		/// <remarks>
-		///    Note that the ContainerBuilder parameter is unique to this module.
-		/// </remarks>
-		protected override void Load(ContainerBuilder builder)
-		{
-			builder.RegisterInstance<Func<string, IRestClient>>(url => new RestClient(url));
-			builder.RegisterInstance<Func<string, Method, IRestRequest>>((resource, method) => new RestRequest(resource, method));
-			builder.RegisterType<RestSharpFactory>().As<IRestSharpFactory>();
-		}
-	}
+  /// <summary>
+  ///   Provides Autofac registrations for the public types in RestSharp.Injection.
+  /// </summary>
+  public class RestSharpModule : Module
+  {
+    /// <summary>
+    ///   Adds RestSharp.Injection-based registrations to the container.
+    /// </summary>
+    /// <param name="builder">
+    ///   The builder through which components can be registered.
+    /// </param>
+    /// <remarks>
+    ///   Note that the ContainerBuilder parameter is unique to this module.
+    /// </remarks>
+    protected override void Load(ContainerBuilder builder)
+    {
+      builder.RegisterType<RestClient>().As<IRestClient>();
+      builder.RegisterType<RestRequest>().As<IRestRequest>();
+      builder.RegisterType<RestSharpFactory>().As<IRestSharpFactory>();
+    }
+  }
 }
